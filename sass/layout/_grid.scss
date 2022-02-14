@@ -1,12 +1,19 @@
 .row{
     max-width: $grid-width;
     margin: 0 auto; //centering a block element inside of another block element
-    
-
     @include clearfix;
 
+    @include respond (tab-port){
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+    
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+       
+        @include respond (tab-port){
+            margin-bottom: 6rem;
+        }
     }
 
     [class ^= "col-"]{
@@ -14,6 +21,14 @@
         
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include respond (tab-port){
+                margin-right: 0;
+                margin-bottom: 6rem;
+            }
+        }
+
+        @include respond (tab-port){
+            width: 100% !important;
         }
     }
     .col-1-of-2{

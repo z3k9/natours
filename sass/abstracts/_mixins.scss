@@ -18,6 +18,8 @@
 
 //1 em is 16px
 
+// Base + typography > General layout + grid > page layout > components
+
 @mixin respond($breakpoint) {
     @if ($breakpoint == phone){
         @media (max-width: 37.5em){
